@@ -1,0 +1,2 @@
+rootProject.name = 'practice001'
+new File("src/main/resources/application-default.yml").createNewFile()

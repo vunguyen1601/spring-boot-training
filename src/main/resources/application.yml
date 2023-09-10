@@ -1,0 +1,45 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: pratice001-service
+  jpa:
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        globally_quoted_identifiers: true
+        dialect: org.hibernate.dialect.OracleDialect
+#        dialect: org.hibernate.dialect.H2Dialect
+  servlet:
+    multipart:
+      max-file-size: 10MB
+
+  jackson:
+    property-naming-strategy: LOWER_CAMEL_CASE
+    default-property-inclusion: non_null
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: true
+  datasource:
+    hikari:
+      max-lifetime: 580000
+#    driver-class-name: org.h2.Driver
+
+springdoc:
+  # Specify the path of the OpenAPI documentation
+  api-docs.path: /api-docs
+  swagger-ui:
+    # Specify the path of the Swagger UI
+    path: /swagger-ui.html
+    # Enable or disable Swagger UI
+    enabled: true
+
+logging:
+  level:
+    root: INFO
+    org.springframework.*: INFO
+    org.apache.ibatis.*: DEBUG
+    tech.outsource.*: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
