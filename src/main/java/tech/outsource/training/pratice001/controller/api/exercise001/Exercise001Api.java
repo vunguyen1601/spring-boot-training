@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import tech.outsource.training.pratice001.controller.api.exercise001.models.TestGetResponse;
 
-@Tag(name = "Area", description = "the area API")
+@Tag(name = "exercise", description = "the area API")
 @RequestMapping("/v1/api/exercise001")
 public interface Exercise001Api {
 
