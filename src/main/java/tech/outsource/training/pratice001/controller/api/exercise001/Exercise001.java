@@ -11,4 +11,5 @@ public class Exercise001 implements Exercise001Api{
     public TestGetResponse testGet(Integer id) {
         return new TestGetResponse(id, "ok");
     }
+
 }
