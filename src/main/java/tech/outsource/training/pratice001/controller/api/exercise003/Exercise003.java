@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 public class Exercise003 implements Exercise003Api {
-    static List<Product> list = new ArrayList<>();
+    public static List<Product> list = new ArrayList<>();
 
     @Override
     public Products getProduct() {
