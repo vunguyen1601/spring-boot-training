@@ -4,14 +4,24 @@ server:
 spring:
   application:
     name: pratice001-service
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2-ui
+  sql:
+    init:
+      mode: always
   jpa:
+#    defer-datasource-initialization: true
     show-sql: true
     open-in-view: false
+    hibernate:
+      ddl-auto: none
     properties:
       hibernate:
         format_sql: true
         globally_quoted_identifiers: true
-        dialect: org.hibernate.dialect.OracleDialect
+        dialect: org.hibernate.dialect.MySQLDialect
 #        dialect: org.hibernate.dialect.H2Dialect
   servlet:
     multipart:
@@ -22,10 +32,28 @@ spring:
     default-property-inclusion: non_null
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: true
+#  datasource:
+#    hikari:
+#      max-lifetime: 580000
+#    url: jdbc:h2:file:./h2/data/demo
+#    username: sa
+#    password: password
+#    driverClassName: org.h2.Driver
+#    jpa:
+#      spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
   datasource:
+    url: jdbc:mysql://14.225.241.239:33003/traning?useSSL=false
+    username: demo_train
+    password: "123456789o"
     hikari:
       max-lifetime: 580000
-#    driver-class-name: org.h2.Driver
+#  flyway:
+#    enabled: false
+##    baselineOnMigrate: true
+##    baselineVersion: 0
+#    url: jdbc:mysql://14.225.241.239:33003/traning?useSSL=false
+#    username: demo_train
+#    password: "123456789o"
 
 springdoc:
   # Specify the path of the OpenAPI documentation
@@ -40,6 +68,5 @@ logging:
   level:
     root: INFO
     org.springframework.*: INFO
-    org.apache.ibatis.*: DEBUG
     tech.outsource.*: DEBUG
     org.hibernate.orm.jdbc.bind: TRACE

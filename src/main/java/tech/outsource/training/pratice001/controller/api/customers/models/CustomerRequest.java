@@ -1,0 +1,10 @@
+package tech.outsource.training.pratice001.controller.api.customers.models;
+
+import jakarta.validation.constraints.NotBlank;
+
+public record CustomerRequest(Integer id,
+                              @NotBlank String customerCode,
+                              @NotBlank String firstName,
+                              @NotBlank String lastName,
+                              @NotBlank String email) {
+}
