@@ -21,4 +21,5 @@ public class CustomerCommandService {
     void delete(Customer customer){
         repository.deleteById(customer.id());
     }
+
 }

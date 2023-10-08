@@ -1,28 +1,26 @@
 package tech.outsource.training.pratice001.controller.api.products;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.constraints.Min;
 import org.springframework.web.bind.annotation.*;
-import tech.outsource.training.pratice001.controller.api.exercise003.models.ProductRequest;
-import tech.outsource.training.pratice001.controller.api.products.models.ProductResponse;
-import tech.outsource.training.pratice001.domain.excercise001.Product;
+import tech.outsource.training.pratice001.controller.api.products.models.ProductRequest;
+import tech.outsource.training.pratice001.domain.common.PageImplResponse;
+import tech.outsource.training.pratice001.repository.database.entities.ProductEntity;
 
-import java.util.List;
+import java.util.Optional;
 
 @Tag(name = "Area", description = "the area API")
 @RequestMapping("/v1/api/products")
 public interface ProductsApi {
+    @GetMapping("{id}")
+    Optional<ProductEntity> findById(@PathVariable("id") Integer id);
 
-    @GetMapping
-    List<ProductResponse> list();
-@PostMapping
-    void create(@RequestBody ProductRequest productRequest);
-    @PutMapping("/update")
-    void updateProduct(@RequestBody ProductRequest productRequest);
+    @PostMapping
+    void createProduct (@RequestBody ProductRequest productRequest);
 
-    @DeleteMapping("/delete")
-    void deleteProduct(@RequestParam("id") Integer id);
-    @GetMapping("/getProduct/{id}")
-    Product getProduct(@RequestParam("id") Integer id);
+    @PutMapping("{id}")
+    void updateProduct (@PathVariable("id") Integer id, @RequestBody ProductRequest productRequest);
+
 }
 
 

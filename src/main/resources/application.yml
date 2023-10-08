@@ -56,12 +56,10 @@ spring:
 #    password: "123456789o"
 
 springdoc:
-  # Specify the path of the OpenAPI documentation
-  api-docs.path: /api-docs
+  api-docs:
+    path: /api-docs
   swagger-ui:
-    # Specify the path of the Swagger UI
     path: /swagger-ui.html
-    # Enable or disable Swagger UI
     enabled: true
 
 logging:
@@ -70,3 +68,4 @@ logging:
     org.springframework.*: INFO
     tech.outsource.*: DEBUG
     org.hibernate.orm.jdbc.bind: TRACE
+
