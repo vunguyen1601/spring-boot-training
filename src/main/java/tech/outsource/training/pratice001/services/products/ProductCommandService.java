@@ -40,6 +40,7 @@ public class ProductCommandService {
         repository.save(updateProduct);
     }
     Page<ProductEntity> findByAll(Pageable pageable){
+
         return repository.findAll(pageable);
     }
 
