@@ -1,14 +1,14 @@
-package tech.outsource.training.pratice002.controller.api.products;
+package tech.outsource.training.pratice002.controller.api;
 
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
-import tech.outsource.training.pratice002.controller.api.products.models.LoginRequest;
-import tech.outsource.training.pratice002.controller.api.products.models.UserRequest;
-import tech.outsource.training.pratice002.controller.api.products.models.UserResponse;
+import tech.outsource.training.pratice002.controller.api.models.UserResponse;
+import tech.outsource.training.pratice002.controller.api.models.LoginRequest;
+import tech.outsource.training.pratice002.controller.api.models.UserRequest;
 import tech.outsource.training.pratice002.database.entities.UsersEntity;
 import tech.outsource.training.pratice002.domain.users.Users;
-import tech.outsource.training.pratice002.services.products.UsersUserCaseService;
+import tech.outsource.training.pratice002.services.UsersUserCaseService;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

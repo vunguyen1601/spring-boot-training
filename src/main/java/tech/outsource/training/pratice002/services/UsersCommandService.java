@@ -1,4 +1,4 @@
-package tech.outsource.training.pratice002.services.products;
+package tech.outsource.training.pratice002.services;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;

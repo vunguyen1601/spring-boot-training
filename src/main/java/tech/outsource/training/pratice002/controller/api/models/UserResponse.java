@@ -1,4 +1,4 @@
-package tech.outsource.training.pratice002.controller.api.products.models;
+package tech.outsource.training.pratice002.controller.api.models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotBlank;

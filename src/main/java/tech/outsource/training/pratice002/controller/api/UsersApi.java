@@ -1,10 +1,10 @@
-package tech.outsource.training.pratice002.controller.api.products;
+package tech.outsource.training.pratice002.controller.api;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
-import tech.outsource.training.pratice002.controller.api.products.models.LoginRequest;
-import tech.outsource.training.pratice002.controller.api.products.models.UserRequest;
-import tech.outsource.training.pratice002.controller.api.products.models.UserResponse;
+import tech.outsource.training.pratice002.controller.api.models.UserResponse;
+import tech.outsource.training.pratice002.controller.api.models.LoginRequest;
+import tech.outsource.training.pratice002.controller.api.models.UserRequest;
 
 import java.util.List;
 

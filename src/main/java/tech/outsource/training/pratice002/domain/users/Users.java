@@ -1,7 +1,7 @@
 package tech.outsource.training.pratice002.domain.users;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import tech.outsource.training.pratice002.controller.api.products.models.UserRequest;
+import tech.outsource.training.pratice002.controller.api.models.UserRequest;
 import java.time.LocalDateTime;
 
 public record Users(String name,
